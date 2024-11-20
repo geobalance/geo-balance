@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/a-styleXL.css">
+    <link rel="stylesheet" href="css/b-styleLG.css">
+    <link rel="stylesheet" href="css/c-styleMD.css">
+    <link rel="stylesheet" href="css/d-styleSM.css">
+    <link rel="stylesheet" href="css/e-styleXS.css">
+    <title>Fazer Login</title>
+</head>
+<body>
+    <div class="wrapper-main">
+
+        <!-- Cabeçalho da página -->
+        <header>
+
+            <a href="index.html">
+                <section id="eco-brand">
+                    <h1>Geo Balance</h1>
+                    <p>Conforto e sustentabilidade</p>
+                </section>
+            </a>
+
+            <div id="container-nav-bar">
+                <!-- Menu Hamburger -->
+                <input type="checkbox" id="menu-hamburguer" class="menu-hamburguer">
+                <label for="menu-hamburguer" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Barra de navegação -->
+                <nav id="nav-bar">
+                    <ul>
+                        <a href="index.html">
+                            <li>
+                                <img src="images/icone-home.svg" alt="Ícone de login">
+                                <p>Início</p>
+                            </li>
+                        </a>
+                        <a href="contato.html">
+                            <li>
+                                <img src="images/icone-telefone.svg" alt="Ícone de telefone">
+                                <p>Contato</p>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>  
+            </div>
+        </header>
+        
+        <!-- Conteúdo Principal -->
+        <main>
+            <section id="caixa-login">
+                <form>
+                    <div class="titulo conteudo-centro">
+                        <p>Login</p>
+                    </div>
+
+                    <label for="nomeUsuario">Usuário:</label>
+                    <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Digite seu usuário">
+        
+                    <label for="senhaUsuario">Senha:</label>
+                    <input type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Digite sua senha - (123)">
+        
+                    <a href="#" class="esqueci-senha">Esqueci minha senha</a>
+        
+                    <p id="erroLogin"></p>
+                    
+                    <button type="button" id="btn-login" onclick="iniciarSessao(event)">Autenticar</button>
+                </form>
+            </section>
+        </main>
+
+
+        <!-- Rodapé -->
+        <footer>
+            <p>Global Solution 1TDSPA - 2° Semestre</p>
+            <a href="integrantes.html">Página de integrantes do grupo</a>
+        </footer>
+
+        <!-- Scripts para validar login, não consegui implementar em arquivo externo -->
+        <script src="js/script.js" defer></script>
+
+        <script>
+                var statusLogin = sessionStorage.getItem('logado');
+            
+                if (statusLogin == 'true'){
+                    window.location.href = 'area-cliente.html'
+                } 
+        </script>
+    </div>
+</body>
+</html>

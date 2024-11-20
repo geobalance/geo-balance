@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/a-styleXL.css">
+    <link rel="stylesheet" href="css/b-styleLG.css">
+    <link rel="stylesheet" href="css/c-styleMD.css">
+    <link rel="stylesheet" href="css/d-styleSM.css">
+    <link rel="stylesheet" href="css/e-styleXS.css">
+    <title>Fazer Login</title>
+</head>
+<body>
+    <div class="wrapper-main">
+
+        <!-- Cabeçalho da página -->
+        <header>
+
+            <a href="index.html">
+                <div id="eco-brand">
+                    <h1>Geo Balance</h1>
+                    <p>Conforto e sustentabilidade</p>
+                </div>
+            </a>
+
+            <div id="container-nav-bar">
+                <!-- Menu Hamburger -->
+                <input type="checkbox" id="menu-hamburguer" class="menu-hamburguer">
+                <label for="menu-hamburguer" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Barra de navegação -->
+                <nav id="nav-bar">
+                    <ul>
+                        <a href="index.html">
+                            <li>
+                                <img src="images/icone-home.svg" alt="Ícone de Casa">
+                                <p>Início</p>
+                            </li>
+                        </a>
+                        <a href="contato.html">
+                            <li>
+                                <img src="images/icone-telefone.svg" alt="Ícone de Telefone">
+                                <p>Contato</p>
+                            </li>
+                        </a>
+                        <a href="index.html" id="btn-logout"> <!-- O botão de logout é esse-->
+                            <li>
+                                <img src="images/icone-logout.svg" alt="Ícone de Login">
+                                <p>Sair</p>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>  
+            </div>
+        </header>
+
+        <div id="container-area-cliente">
+            <!-- Barra Lateral -->
+            <aside id="barra-lateral">
+                <h2 id="campoSaudacoes"></h2>
+                <h3>Serviços</h3>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#" id="link-orcamento">
+                                <img src="images/icone-assistente.svg" alt="Ícone de Assistente"> <p>Assistente</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="link-assistente">
+                                <img src="images/icone-agenda.svg" alt="Ícone de Agenda"> <p>Agendar Serviço</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="link-simulacao">
+                                <img src="images/icone-calc.svg" alt="Ícone de Calculadora"> <p>Simular Economia</p>    
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main>
+
+                <!-- LEMBRAR DE INVERTER ISSO AQUI!!! -->
+                <section id="orcamento" class="secao">
+                    <div class="titulo conteudo-centro"><p>Fale com nosso Assistente</p></div>
+                    <div id="espaco-chatbot"></div>
+                </section>
+
+                <section id="assistente" class="secao">
+
+                    <div class="titulo conteudo-centro"><p>Agende um Serviço</p></div>
+                    
+                    <div id="opcoes-agendamento" class="conteudo-centro">
+
+                        <div class="caixa-opcao">
+                            <label for="servicos">Serviço</label>
+                            <select name="servicos" id="servicos">
+                            <option value="">Ver opções...</option>
+                            <option value="orcamento">Orçamento</option>
+                            <option value="instalacao">Instalação</option>
+                            <option value="manutencao">Manutenção</option>
+                            </select>
+                        </div>
+
+                        <div class="caixa-opcao">
+                            <label for="data">Data</label>
+                            <input type="date" name="data" id="data" value="2024-11-22" min="2024-11-22">
+                        </div>
+
+                        <div class="caixa-opcao">
+                            <label for="hora">Hora</label>
+                            <input type="time" id="hora" name="hora" value="09:00" min="09:00" max="18:00">
+                        </div>
+
+                        <div class="caixa-opcao">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="8">
+                        </div>
+
+                        <div class="caixa-opcao">
+                            <label for="numLocal">N° do Local</label>
+                            <input type="text" id="numLocal" name="numLocal" placeholder="N° 000" maxlength="6">
+                        </div>
+
+                        <div class="caixa-opcao">
+                            <label for="referencia">Referência</label>
+                            <input type="text" id="referencia" name="referencia" placeholder="Próximo de..." maxlength="6">
+                        </div>
+                    </div>
+
+                    <!-- Aqui é o cartãozinho que vai confirmando -->
+                    <div id="card-agendamento">
+                        <p id="tituloCard" class="titulo conteudo-centro">Selecione um serviço</p>
+                        
+                        <div id="container-descricao">
+                            <div id="descricaoServico" class="caixaInformacoesAgendamento"></div>
+                            <div id="informacoesLocal" class="caixaInformacoesAgendamento"></div>
+                        </div>
+                    </div>
+
+                    <div id="campo-confirmacao-agenda">
+                        <button type="btn-agendar" id="btn-agendar">Agendar</button>    
+                    </div>
+
+                </section>
+
+            
+                <section id="simulacao" class="secao">
+                    <h1>Simular Economia</h1>
+                    <p>Veja quanto você pode economizar.</p>
+                </section>
+            </main>
+        </div>
+
+
+        <!-- Rodapé -->
+        <footer>
+            <p>Global Solution 1TDSPA - 2° Semestre</p>
+            <a href="integrantes.html">Página de integrantes do grupo</a>
+        </footer>
+
+
+        <!-- Scripts para validar login, não consegui implementar em arquivo externo -->
+        <script src="js/script.js" defer></script>
+
+        <script>
+                var statusLogin = sessionStorage.getItem('logado');
+                console.log(statusLogin)
+        </script>
+    </div>
+</body>
+</html>

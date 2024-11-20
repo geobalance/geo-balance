@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/a-styleXL.css">
+    <link rel="stylesheet" href="css/b-styleLG.css">
+    <link rel="stylesheet" href="css/c-styleMD.css">
+    <link rel="stylesheet" href="css/d-styleSM.css">
+    <link rel="stylesheet" href="css/e-styleXS.css">
+    <title>Geo Balance</title>
+</head>
+<body>
+    <div class="wrapper-main">
+
+        <!-- Cabeçalho da página -->
+        <header>
+
+            <a href="index.html">
+                <section id="eco-brand">
+                    <h1>Geo Balance</h1>
+                    <p>Conforto e sustentabilidade</p>
+                </section>
+            </a>
+
+            <div id="container-nav-bar">
+
+                <!-- Menu Hamburger -->
+                <input type="checkbox" id="menu-hamburguer" class="menu-hamburguer">
+                <label for="menu-hamburguer" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Barra de navegação -->
+                <nav id="nav-bar">
+                    <ul>
+                        <a href="index.html">
+                            <li>
+                                <img src="images/icone-home.svg" alt="Ícone de Casa">
+                                <p>Início</p>
+                            </li>
+                        </a>
+                        <a href="sistema.html">
+                            <li>
+                                <img src="images/icone-sistema.svg" alt="Ícone de Ferramenta">
+                                <p>Sistema</p>
+                            </li>
+                        </a>
+                        <a href="login.html">
+                            <li>
+                                <img src="images/icone-login.svg" alt="Ícone de Login">
+                                <p>Login</p>
+                            </li>
+                        </a>
+                    </ul>
+                </nav>  
+            </div>
+
+        </header>
+
+        <!-- Conteúdo Principal da página -->
+        <main>
+            <section id="titulo-contato" class="titulo conteudo-centro">
+                <p>Quer falar conosco? <br>Entre em contato!</p>
+            </section>
+
+                <section id="area-contato">
+                    <form>
+                        <div class="titulo conteudo-centro">
+                            <p>Seus dados contato</p>                            
+                        </div>
+
+                        <div>
+                            <label for="input-email">Email*: </label>
+                            <input type="text" name="input-email" id="input-email">
+                        </div>
+            
+                        <div>
+                            <label for="input-telefone">Telefone*: </label>
+                            <input type="text" name="input-telefone" id="input-telefone"  maxlength="15" onkeypress="formatarTexto('telefone', this)">
+                        </div>
+            
+                        <div>
+                            <label for="input-mensagem">Mensagem: </label>
+                            <textarea name="input-mensagem" id="input-mensagem"></textarea>
+                        </div>
+
+                        <!-- a mensagem de erro e sucesso ficam aqui -->
+                        <p id="mensagemForm"></p>
+
+                        <button type="button" id="btn-enviar-contato" onclick="enviarFormulario()">Enviar</button>
+                    </form> 
+            
+                    <!-- Nova div de dica -->
+                    <div id="dica">
+
+                        <div class="titulo conteudo-centro">Se registre!</div>
+
+                        <div class="conteudo-centro">
+                            <p>Faça Login em nosso site e tenha acesso a um Assistente com IA, Agendamentos de Orçamento Personalizados e Simulações de Gastos;</p>
+                        </div>
+
+
+                        <div class="conteudo-centro">
+                            <a href="login.html">
+                                <img src="images/icone-login.svg" class="icone-contato" alt="Ícone de login">
+                                Fazer Login
+                            </a>
+                        </div>
+                    </div>
+                </section>
+        </main>
+
+        <footer>
+            <p>Global Solution 1TDS- 2° Semestre</p>
+            <a href="#">Página de integrantes</a>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

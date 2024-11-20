@@ -1,0 +1,865 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Large */
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .wrapper-main {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    /* Configuração do footer */
+    footer{
+        padding: 1rem 2rem;
+        background-color: #555;
+        font-family: "Baloo Chettan 2", sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer p, footer a{
+        color: var(--cor-texto-claro);
+    }
+
+    footer a:hover{
+        text-decoration: underline;
+    }
+
+    header{
+        background-color: var(--cor-quarta);
+        padding: 0.4rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header li, a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* "Logo" header */
+    header #eco-brand h1 {
+        font-size: 2.6rem;
+        font-family: "Anton", sans-serif;
+        background: linear-gradient(to right, var(--cor-secundaria), var(--cor-principal)); /* Efeito de gradiente */
+        background-clip: text;
+        color: transparent;
+    }
+
+    header #eco-brand p {
+        font-size: 1.2rem;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-weight: bold;
+        color: var(--cor-texto-secundario);
+    }
+
+    /* Barra de navegação - Opções do header */
+    header nav ul {
+        text-align: center;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header nav ul li {
+        flex: 1;
+        min-width: 8rem;
+        font-size: 1.2rem;
+        color: var(--cor-quarta);
+        margin: 0 1rem;
+        padding: 0.2rem 0.8rem;
+        background-color: var(--cor-principal);
+        border-radius: 30px;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    header nav ul li:hover {
+        background-color: var(--cor-secundaria);
+        transition: background-color 0.4s ease
+    }
+
+    /* Configurações gerais */
+    header {
+        margin-bottom: 15px;
+    }
+
+    section {
+        margin-bottom: 15px;
+    }
+
+    .conteudo-esquerda {
+        display: flex;
+        justify-content: start;
+        text-align: left;
+    }
+
+    .conteudo-centro {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .conteudo-direita {
+        display: flex;
+        justify-content: end;
+        text-align: right;
+    }
+
+    .titulo p {
+        margin: 1rem 2rem;
+    }
+
+     /* PÁGINA INICIAL - url(../index.html) */
+     #hero {
+        width: 100vw;
+        height: 270px;
+        background-image: url('../images/banner-hero.svg');
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #hero .conteudo-texto {
+        margin-top:50px;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        color: var(--cor-quarta);
+        align-items: center;
+        text-align: center;
+    }
+
+    #hero .conteudo-texto h1 {
+        font-family: "Anton", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 0.2rem;
+    }
+
+    #hero .conteudo-texto p {
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    #hero #btn-mais {
+        width: 16rem;
+        height: 3.2rem;
+        font-size: 2rem;
+        background-color: var(--cor-terciaria);
+        margin-top: 30px;
+        border-radius: 60px;
+        text-decoration: none;
+        border: 3px solid var(--cor-quinta);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hero #btn-mais a {
+        color: var(--cor-quarta);
+        font-family: "Anton", sans-serif;
+    }
+
+    #hero #btn-mais:hover {
+        border: 3px solid var(--cor-terciaria);
+        background-color: var(--cor-quinta);
+        transition: background-color 0.2s ease
+    }
+
+    /* Sobre o projeto */
+    #sobre {
+        width: 100vw;
+        height: auto;
+        background-color: var(--cor-quarta);
+        padding: 20px 0;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    #sobre .titulo {
+        font-family: "Anton", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 0.1rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bold;
+    }
+
+    #sobre .descricao{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #sobre .descricao p {
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: var(--cor-quinta);
+        margin: 0.4rem 2rem;
+        max-width: 50vw;
+        text-align: justify;
+    }
+
+    #sobre img{
+        max-width: 40vw;
+        min-height: 30vh;
+        border: 5px solid var(--cor-terciaria);
+        border-radius: 15px;
+        margin: 0 2rem 0 0;
+    }
+
+    /* Benefícios do projeto */
+    #beneficios {
+        width: 100vw;
+        height: auto;
+        padding: 20px 0;    
+        background-color: var(--cor-terciaria);
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    #beneficios .titulo {
+        font-family: "Anton", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 0.1rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bold;
+    }
+
+    #beneficios .icone-beneficio {
+        width: 120px;
+        height: 120px;
+        border: 5px solid var(--cor-quarta);
+        background-color: var(--cor-quinta);
+        padding: 20px;
+        border-radius: 500px;
+    }
+
+    #beneficios .conteudo-esquerda, #beneficios .conteudo-direita {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    #beneficios .descricao span {
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-weight: bold;
+        font-size: 1.6rem;
+        text-decoration: underline;
+        color: var(--cor-quarta);
+    }
+
+    #beneficios .descricao p {
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: var(--cor-quarta);
+        margin: 0.8rem 2rem;
+        max-width: 65vw;
+    }
+
+    /* Se interessou? */
+    #interesse {
+        width: 100vw;
+        height: auto;
+        padding: 20px 0;
+        background-color: var(--cor-sexta);
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    #interesse .titulo {
+        font-family: "Anton", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 0.1rem;
+        color: var(--cor-quarta);
+    }
+
+    #interesse .descricao p {
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: var(--cor-quarta);
+        margin-bottom: 10px;
+        max-width: 60vw;
+    }
+
+    #btn-contato-index {
+        width: 16rem;
+        height: 3rem;
+        border: 3px solid var(--cor-quinta);
+        background-color: var(--cor-terciaria);
+        border-radius: 60px;
+        text-align: center;
+        margin: 0.4rem 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #btn-contato-index a {
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: var(--cor-quarta);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Anton", sans-serif;
+    }
+
+    #btn-contato-index:hover {
+        background-color: var(--cor-quinta);
+        border: 3px solid var(--cor-terciaria);
+        transition: background-color 0.3s ease;
+    }
+
+    /* PÁGINA CONTATO  url(../contato.html)*/
+    #titulo-contato{
+        width: 100vw;
+        height: 200px; 
+        background-image: url('../images/banner-contato.svg');
+        background-size: cover; 
+        background-position: center center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #titulo-contato p{
+        font-family: "Anton", "sans-serif";
+        font-size: 2.6rem;
+        letter-spacing: 0.1rem;
+        color: #FFF8E8;
+    }
+
+    /* Formulário de contato */
+    #area-contato {
+        width: 100vw;
+        background-color: #AAB396; 
+        display: flex;
+        justify-content: space-around; 
+        align-items: start; 
+    }
+    
+    #area-contato form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 40vw;
+        margin: 2rem 4rem;
+        background-color: #747D5F;
+        padding-right: 20px;
+        padding-left: 20px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #area-contato form .titulo{
+        font-family: "Anton", "sans-serif";
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        color: #503c2f;
+        font-weight: bolder;
+    }
+
+    #area-contato form div {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #area-contato form div label {
+        font-family: "Baloo Chettan 2", "sans-serif";
+        font-weight: bold;
+        font-size: 1rem;
+        color: #333;
+    }
+    
+    /* Estilo dos inputs e textarea em um só comando */
+    #area-contato form div input,
+    #area-contato form div textarea {
+        border: 1px solid #FFF8E8;
+        border-radius: 5px;
+        padding: 2px;
+        font-size:  1rem;
+        font-family: "Baloo Chettan 2", "sans-serif";
+    }
+    
+    #area-contato form div textarea {
+        height: 80px;
+        resize: none;
+    }
+    
+    #area-contato button {
+        width: 20vw;
+        padding: 5px;
+        background-color: #333;
+        color: #FFF8E8;
+        border: none;
+        border-radius: 15px;
+        font-size: 1.6rem;
+        cursor: pointer;
+        align-self: center;
+        margin: 1rem 4rem;
+    }
+    
+    #area-contato button:hover {
+        background-color: #555;
+    }
+
+    /* Estilo da div de dica */
+    #dica{
+        width: 30vw;
+        margin: 2rem 4rem;
+        justify-content: center;
+        padding: 20px;
+        background-color: #747D5F;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    #dica .titulo{
+        font-family: "Anton", "sans-serif";
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        color: #503c2f;
+        font-weight: bolder;
+        margin: 1rem 4rem;
+    }
+
+    #dica p{
+        font-family: "Baloo Chettan 2", "sans-serif";
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #FFF8E8;
+        text-align: center;
+    }
+    
+    /* Botão de redirecionar para login */
+    #dica a{
+        width: 10rem;
+        border: 3px solid #747D5F;
+        background-color: #AAB396;
+        border-radius: 60px;
+        text-align: center;
+        margin: 1rem 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #dica a{
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: #FFF8E8;
+        font-family: "Anton", "sans-serif";
+    }
+
+    #dica a:hover{
+        border: 3px solid #AAB396;
+        background-color: #747D5F;
+    }
+
+    /* Estilo da mensagem de erro */
+    #mensagemForm {
+        font-family: "Baloo Chettan 2", "sans-serif";
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #793b12;
+        align-self: center;
+    }
+
+    /* PÁGINA DE LOGIN -  url(../login.html)*/
+    #caixa-login {
+        width: 100vw;
+        background-color: var(--cor-principal);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /* Formulário de login */
+    #caixa-login form {
+        background-color: var(--cor-quarta);
+        padding: 30px;
+        border-radius: 15px;
+        width: 40vw;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #caixa-login .titulo p {
+        font-family: "Anton", sans-serif;
+        font-size: 2.6rem;
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+        color: var(--cor-texto-escuro);
+        margin-bottom: 20px;
+    }
+
+    #caixa-login form label {
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-weight: bold;
+        color: var(--cor-texto-escuro);
+        font-size: 1.2rem;
+    }
+
+    #caixa-login form input {
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1rem;
+        padding: 12px;
+        border: 2px solid var(--cor-principal);
+        border-radius: 5px;
+        outline: none;
+    }
+
+    /* Link de "esqueci minha senha" */
+    .esqueci-senha {
+        font-family: "Baloo Chettan 2", sans-serif;
+        color: var(--cor-link);
+        text-decoration: none;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    .esqueci-senha:hover {
+        text-decoration: underline;
+    }
+
+    #erroLogin {
+        font-family: "Baloo Chettan 2", "sans-serif";
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #793b12;
+        align-self: center;
+    }
+
+    /* Estilo do botão de login */
+    #caixa-login form button {
+        font-family: "Anton", "sans-serif";
+        width: 16rem;
+        height: 3rem;
+        border: 3px solid var(--cor-quinta);
+        background-color: var(--cor-terciaria);
+        color: var(--cor-texto-claro);
+        font-size: 2rem;
+        border-radius: 60px;
+        text-align: center;
+        margin: 1rem;
+        align-self: center; /* Centraliza o botão */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #caixa-login form button:hover {
+        border: 3px solid var(--cor-terciaria);
+        background-color: var(--cor-quinta);
+        color: var(--cor-quarta);
+        cursor: pointer;
+    }
+
+    /* ÁREA DO CLIENTE url(../area-cliente.html)*/
+
+    /* Configuração para a barra lateral e a outra coisa aparecerem lado a lado */
+    #container-area-cliente{
+        display: flex;
+        align-items: center;
+        background-color: var(--cor-principal);
+        margin-bottom: 20px;
+        padding: 30px;
+    }
+
+    /* Barra lateral */
+    #barra-lateral {
+        width: 16vw;
+        height: 86vh;
+        max-height: 86vh;
+        background-color: var(--cor-quinta);
+        border-radius: 15px;
+        color: var(--cor-texto-claro);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    /* Saudações */
+    #barra-lateral #campoSaudacoes {
+        font-family: "Anton", sans-serif;
+        font-size: 1.8rem;
+        letter-spacing: 0.2rem;
+        font-weight: bold;
+        color: var(--cor-texto-claro);
+    }
+
+    /* Título de serviços */
+    #barra-lateral h3 {
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: var(--cor-texto-escuro);
+    }
+
+    #barra-lateral nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #barra-lateral nav ul li {
+        margin-bottom: 15px;
+    }
+
+    #barra-lateral nav ul li a img {
+        margin-right: 10px;
+    }
+
+    #barra-lateral nav ul li a {
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--cor-texto-claro);
+        font-weight: bold;
+        padding: 5px 5px;
+        display: block;
+        border-radius: 5px;
+        background-color: var(--cor-terciaria);
+        text-align: left;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    #barra-lateral nav ul li a:hover {
+        background-color: var(--cor-quarta);
+        color: var(--cor-quinta);
+    }
+
+    /* Configurando a página da seção completa */
+    /* Seção ativa */
+    .secao{
+        margin-left: 2rem;
+        width: 135%;
+        height: 600px;
+        background-color: var(--cor-quarta);
+        border-radius: 15px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .secao .titulo p{
+        font-family: "Anton", sans-serif;
+        font-size: 2.4rem;
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+        color: var(--cor-texto-escuro);
+    }
+
+    .secao-oculta {
+        display: none; /* Torna a seção invisível, mas ainda ocupa o mesmo espaço */
+    }
+    
+
+    /* CONFIGURAÇÃO ASSISTENTE CHATBOT */
+    #espaco-chatbot{
+        width: 80%; 
+        height: 100%;
+        border: 5px solid var(--cor-principal);
+        border-radius: 15px;
+        margin-bottom: 50px;
+    }
+
+    /* CONFIGURAÇÃO AGENDAR SERVIÇO */
+    #opcoes-agendamento{
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    #opcoes-agendamento .caixa-opcao{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #opcoes-agendamento .caixa-opcao label{
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.6rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bolder;
+        margin: 5px;
+    }
+
+    #opcoes-agendamento .caixa-opcao input, #opcoes-agendamento .caixa-opcao select{
+        border: 1px solid #333;
+        border-radius: 10px;
+        width: 200px;
+        height: 40px;
+        text-align: center;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        color: var(--cor-texto-escuro);
+    }
+
+
+    #card-agendamento{
+        text-align: center;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-weight: bold;
+        font-size: 1.4rem;
+        width: 60%;
+        color: var(--cor-texto-claro);
+        padding: 10px;
+        background-color: var(--cor-quinta);
+        border-radius: 15px;
+        margin: 30px;
+        text-align: start;
+        border: 3px solid var(--cor-texto-secundario);
+    }
+
+    #card-agendamento #tituloCard{
+        color: var(--cor-texto-claro);
+        font-size: 1.6rem;
+        background-color: var(--cor-quinta);
+    }
+
+    #card-agendamento #container-descricao{
+        height: 100px;
+        display: flex;
+        justify-content: center
+    }
+
+    #card-agendamento .caixaInformacoesAgendamento{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #card-agendamento .caixaInformacoesAgendamento span{
+        color: var(--cor-texto-escuro);
+        margin-right: 10px;
+
+    }
+
+    #campo-confirmacao-agenda #btn-agendar {
+        width: 18rem;
+        height: 3.4rem;
+        font-size: 2.2rem;
+        background-color: var(--cor-terciaria);
+        border-radius: 60px;
+        text-decoration: none;
+        border: 3px solid var(--cor-quinta);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--cor-quarta);
+        font-family: "Anton", sans-serif;
+    }
+
+    #campo-confirmacao-agenda #btn-agendar:hover {
+        border: 3px solid var(--cor-terciaria);
+        background-color: var(--cor-quinta);
+        transition: background-color 0.2s ease
+    }
+
+
+
+    /*  PÁGINA DE INTEGRANTES - DEIXAR ISSO SEMPRE AQUI EM BAIXO*/
+    #integrantes{
+        background-color: var(--cor-terciaria);
+        padding: 1rem 0;
+        margin-bottom: 20px;
+    }
+
+    #integrantes .titulo{
+        font-family: "Anton", sans-serif;
+        color: var(--cor-texto-escuro);
+        font-size: 2.6rem;
+    }
+
+    #container-integrantes {
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+    }
+
+    .foto-integrante {
+        display: flex;
+        justify-content: center;
+    }
+
+    .borda-foto-integrante {
+        width: 10vw;
+        border: 5px solid var(--cor-quarta);
+        margin-top: 20px;
+        border-radius: 150px;
+    }
+
+    .integrante {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex: 1;
+        background-color: var(--cor-quinta);
+        border: 3px solid var(--cor-quarta);
+        margin: 0.3rem;
+        padding: 0.3rem;
+        border-radius: 30px;
+
+    }
+
+    .informacoes-integrante .conteudo-integrante {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    .informacoes-integrante .conteudo-integrante a {
+        text-decoration: none;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        color: var(--cor-texto-claro);
+    }
+
+    .logo-integrante {
+        width: 12%;
+        height: 12%;
+        margin-right: 1rem;
+        opacity: 90%;
+    }
+
+}   
+
+
+
+
+/* <600px, 601px, 768px, 992px, 1200px */
