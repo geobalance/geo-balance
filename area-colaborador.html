@@ -89,7 +89,7 @@
 
                 <!-- LEMBRAR DE INVERTER ISSO AQUI!!! -->
                 <section id="orcamento" class="secao">
-                    <!-- <div class="titulo conteudo-centro"><p>Fale com nosso Assistente</p></div> -->
+                    <div class="titulo conteudo-centro"><p>Fale com nosso Assistente</p></div>
                     <div id="espaco-chatbot"></div>
                 </section>
 
@@ -154,45 +154,49 @@
             
                 <section id="simulacao" class="secao">
 
-                    <div class="titulo conteudo-centro"><p>Configure um Ambiente para calcular a economia</p></div>
+                    <div class="titulo conteudo-centro"><p>Simular Gastos</p></div>
 
-                    <div id="opcoes-calculadora">
-                        <div class="caixa-opcao">
-                            <label for="altura">Altura (metros) </label>
+                    <p>Configure o Ambiente</p>
+
+                    <div id="container-opcoes-calculadora">
+                        <div>
+                            <label for="altura">Altura (em metros): </label>
                             <input type="number" id="altura" placeholder="Altura">
                         </div>
                     
-                        <div class="caixa-opcao">
-                            <label for="comprimento">Comprimento (metros) </label>
+                        <div>
+                            <label for="comprimento">Comprimento (em metros): </label>
                             <input type="number" id="comprimento" placeholder="Comprimento">
                         </div>
                     
-                        <div class="caixa-opcao">
-                            <label for="qtdPessoas">Quantidade de pessoas</label>
+                        <div>
+                            <label for="qtdPessoas">Quantidade de pessoas: </label>
                             <input type="number" id="qtdPessoas" placeholder="Pessoas">
                         </div>
                     
-                        <div class="caixa-opcao">
-                            <label for="qtdEletronicos">Quantidade de eletrônicos</label>
+                        <div>
+                            <label for="qtdEletronicos">Quantidade de eletrônicos: </label>
                             <input type="number" id="qtdEletronicos" placeholder="Eletrônicos">
                         </div>
                     
-                        <div class="caixa-opcao-checkbox">
-                            <label for="exposicao">Tem alta exposição ao sol?</label>
+                        <div>
+                            <label for="exposicao">Alta exposição ao sol?</label>
                             <input type="checkbox" id="exposicao">
                         </div>
+
+                        <button onclick="configurarAmbiente()">Configurar Ambiente</button>
+
                     </div>
 
-                    <div id="resultadoConsumo">
-                        <p class="titulo conteudo-centro">Gastos Aproximados</p>
-
-                        <p class="item conteudo-esquerda"><span>Ar-condicionado: </span>R$ ---</p>
-                        <p class="item conteudo-esquerda"><span>Poço Canadense: </span>R$ ---</p>
-                        <p class="item conteudo-esquerda"><span>Ar-condicionado + Poço: </span>R$ ---</p>
-                        <p id="totalEconomia" class="item conteudo-centro">Total Economizado: R$ ---</p>
-                    </div>
-                    
-                    <button id="btn-config-ambiente">Salvar e Calcular</button>
+                
+                
+                    <h2>Resultado</h2>
+                    <p id="resultadoAmbiente"></p>
+                
+                    <h2>Consumo do Sistema</h2>
+                    <button onclick="calcularConsumo()">Calcular Consumo do Ventilador e Ar-Condicionado</button>
+                
+                    <p id="resultadoConsumo"></p>
                 
                 </section>
             </main>

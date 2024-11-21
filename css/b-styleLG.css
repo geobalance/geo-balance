@@ -321,6 +321,102 @@
         transition: background-color 0.3s ease;
     }
 
+    /* PÁGINA SISTEMA */
+
+    /* Descrição poço */
+    #descricao-poco{
+        background-color: var(--cor-terciaria);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #descricao-poco .conteudo-texto .titulo{
+        font-family: "Anton", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 0.1rem;
+        margin:  1rem 4rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bold;
+    }
+
+    #descricao-poco .conteudo-texto{
+        width: 78%;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        color: var(--cor-texto-claro);
+        margin-bottom: 2rem;
+    }
+
+    /* Como funciona */
+    #como-funciona{
+        background-color: var(--cor-quarta);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #como-funciona .conteudo-texto .titulo{
+        font-family: "Anton", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 0.1rem;
+        margin:  1rem 4rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bold;
+    }
+
+    #como-funciona .conteudo-texto{
+        width: 90%;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        color: var(--cor-quinta);
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    #como-funciona .conteudo-texto span{
+        font-size: 1.6rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    /* Representação gráfica do poço */
+    #representacao-poco{
+        height: auto;
+        background-color: var(--cor-sexta);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #representacao-poco .conteudo-texto .titulo{
+        font-family: "Anton", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 0.1rem;
+        margin: 1rem 4rem;
+        color: var(--cor-texto-claro);
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Anton", sans-serif;   
+    }
+
+    #representacao-poco .conteudo-texto img{
+        width: 70vw;
+    }
+
+
     /* PÁGINA CONTATO  url(../contato.html)*/
     #titulo-contato{
         width: 100vw;
@@ -586,8 +682,8 @@
     /* Barra lateral */
     #barra-lateral {
         width: 16vw;
-        height: 86vh;
-        max-height: 86vh;
+        height: 57vw;
+        max-height: 57vw;
         background-color: var(--cor-quinta);
         border-radius: 15px;
         color: var(--cor-texto-claro);
@@ -649,23 +745,25 @@
         color: var(--cor-quinta);
     }
 
-    /* Configurando a página da seção completa */
-    /* Seção ativa */
+    /* Configuração da seção */
     .secao{
-        margin-left: 2rem;
-        width: 135%;
-        height: 600px;
+        margin: 2rem;
+        width: 75vw;
+        max-width: 75vw;
+        height: 57vw;
+        max-height: 57vw;
         background-color: var(--cor-quarta);
         border-radius: 15px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
+        border: 5px solid var(--cor-texto-escuro);
     }
 
     .secao .titulo p{
         font-family: "Anton", sans-serif;
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         letter-spacing: 0.1rem;
         font-weight: bold;
         color: var(--cor-texto-escuro);
@@ -675,25 +773,23 @@
         display: none; /* Torna a seção invisível, mas ainda ocupa o mesmo espaço */
     }
     
-
     /* CONFIGURAÇÃO ASSISTENTE CHATBOT */
     #espaco-chatbot{
-        width: 80%; 
+        position: relative; 
+        width: 100%;
         height: 100%;
-        border: 5px solid var(--cor-principal);
         border-radius: 15px;
-        margin-bottom: 50px;
     }
 
     /* CONFIGURAÇÃO AGENDAR SERVIÇO */
     #opcoes-agendamento{
-        width: 60%;
+        width: 90%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
 
-    #opcoes-agendamento .caixa-opcao{
+    .caixa-opcao{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -718,7 +814,6 @@
         font-size: 1.2rem;
         color: var(--cor-texto-escuro);
     }
-
 
     #card-agendamento{
         text-align: center;
@@ -784,6 +879,135 @@
     }
 
 
+    /* CALCULADORA - SIMULAÇÃO   */
+    #simulacao .titulo p{
+        font-size: 1.8rem;
+    }
+
+    #opcoes-calculadora{
+        width: 80%;        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #opcoes-calculadora div{
+        margin: 5px;
+    }
+
+    #opcoes-calculadora .caixa-opcao input, #opcoes-agendamento .caixa-opcao select{
+        border: 1px solid #333;
+        border-radius: 10px;
+        width: 160px;   
+        height: 30px;
+        text-align: center;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1rem;
+        color: var(--cor-texto-escuro);
+    }
+
+    #opcoes-calculadora .caixa-opcao label{
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.3rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bolder;
+    }
+
+    .caixa-opcao-checkbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caixa-opcao-checkbox label{
+        margin: 5px;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bolder;
+    }
+
+    .caixa-opcao-checkbox input{
+        border: 1px solid #333;
+        border-radius: 50px;
+        width: 25px;   
+        height: 25px;
+        text-align: center;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        color: var(--cor-texto-escuro);
+        appearance: none; 
+        background-color: #fff; 
+        cursor: pointer; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: '❌';
+    }
+    
+    .caixa-opcao-checkbox input::before {
+        content: '✖';
+    }
+    
+    .caixa-opcao-checkbox input:checked::before {
+        content: '✔';
+    }
+
+    #btn-config-ambiente{
+        width: 16rem;
+        height: 3rem;
+        font-size: 1.6rem;
+        background-color: var(--cor-terciaria);
+        border-radius: 60px;
+        text-decoration: none;
+        border: 3px solid var(--cor-quinta);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--cor-quarta);
+        font-family: "Anton", sans-serif;
+    }
+
+    #btn-config-ambiente:hover {
+        background-color: var(--cor-quinta);
+        border: 3px solid var(--cor-terciaria);
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+
+    #resultadoConsumo{
+        width: 60%;
+        height: 38%;
+        text-align: center;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: var(--cor-texto-claro);
+        padding: 10px;
+        background-color: var(--cor-quinta);
+        border-radius: 15px;
+        margin: 10px;
+        text-align: start;
+        border: 3px solid var(--cor-texto-secundario);
+    }
+
+    #resultadoConsumo .titulo{
+        color: var(--cor-texto-claro);
+        font-size: 1.6rem;
+        background-color: var(--cor-quinta);
+    }
+
+    #resultadoConsumo .item span{
+        color: var(--cor-texto-escuro);
+        margin-right: 5px;
+    }
+
+    #totalEconomia{
+        margin-top: 5px;   
+        font-size: 1.8rem;
+    }
 
     /*  PÁGINA DE INTEGRANTES - DEIXAR ISSO SEMPRE AQUI EM BAIXO*/
     #integrantes{

@@ -363,6 +363,104 @@
         transition: background-color 0.3s ease;
     }
 
+
+    /* PÁGINA SISTEMA */
+
+    /* Descrição poço */
+    #descricao-poco{
+        background-color: var(--cor-terciaria);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #descricao-poco .conteudo-texto .titulo{
+        font-family: "Anton", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 0.1rem;
+        margin:  1rem 4rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bold;
+    }
+
+    #descricao-poco .conteudo-texto{
+        width: 78%;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        color: var(--cor-texto-claro);
+        margin-bottom: 2rem;
+    }
+
+    /* Como funciona */
+    #como-funciona{
+        background-color: var(--cor-quarta);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #como-funciona .conteudo-texto .titulo{
+        font-family: "Anton", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 0.1rem;
+        margin:  1rem 4rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bold;
+    }
+
+    #como-funciona .conteudo-texto{
+        width: 90%;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        color: var(--cor-quinta);
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    #como-funciona .conteudo-texto span{
+        font-size: 1.6rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    /* Representação gráfica do poço */
+    #representacao-poco{
+        height: auto;
+        background-color: var(--cor-sexta);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #representacao-poco .conteudo-texto .titulo{
+        font-family: "Anton", sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 0.1rem;
+        margin: 1rem 4rem;
+        color: var(--cor-texto-claro);
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Anton", sans-serif;   
+    }
+
+    #representacao-poco .conteudo-texto img{
+        width: 70vw;
+    }
+
+
+
     /* PÁGINA CONTATO  url(../contato.html)*/
     #titulo-contato{
         width: 100vw;
@@ -619,7 +717,110 @@
         cursor: pointer;
     }
 
+    /* ÁREA DO CLIENTE url(../area-cliente.html)*/
 
+    /* Configuração para a barra lateral e a outra coisa aparecerem lado a lado */
+    #container-area-cliente{
+        display: flex;
+        align-items: center;
+        background-color: var(--cor-principal);
+        margin-bottom: 20px;
+        padding: 30px;
+    }
+
+    /* Barra lateral */
+    #barra-lateral {
+        width: 16vw;
+        height: 57vw;
+        max-height: 57vw;
+        background-color: var(--cor-quinta);
+        border-radius: 15px;
+        color: var(--cor-texto-claro);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    /* Saudações */
+    #barra-lateral #campoSaudacoes {
+        font-family: "Anton", sans-serif;
+        font-size: 1.8rem;
+        letter-spacing: 0.2rem;
+        font-weight: bold;
+        color: var(--cor-texto-claro);
+    }
+
+    /* Título de serviços */
+    #barra-lateral h3 {
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: var(--cor-texto-escuro);
+    }
+
+    #barra-lateral nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #barra-lateral nav ul li {
+        margin-bottom: 15px;
+    }
+
+    #barra-lateral nav ul li a img {
+        margin-right: 10px;
+    }
+
+    #barra-lateral nav ul li a {
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--cor-texto-claro);
+        font-weight: bold;
+        padding: 5px 5px;
+        display: block;
+        border-radius: 5px;
+        background-color: var(--cor-terciaria);
+        text-align: left;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    #barra-lateral nav ul li a:hover {
+        background-color: var(--cor-quarta);
+        color: var(--cor-quinta);
+    }
+
+    /* Configuração da seção */
+    .secao{
+        margin: 2rem;
+        width: 75vw;
+        max-width: 75vw;
+        height: 57vw;
+        max-height: 57vw;
+        background-color: var(--cor-quarta);
+        border-radius: 15px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        border: 5px solid var(--cor-texto-escuro);
+    }
+
+    .secao .titulo p{
+        font-family: "Anton", sans-serif;
+        font-size: 2.2rem;
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+        color: var(--cor-texto-escuro);
+    }
+
+    .secao-oculta {
+        display: none; /* Torna a seção invisível, mas ainda ocupa o mesmo espaço */
+    }
 
 
     /*  PÁGINA DE INTEGRANTES - DEIXAR ISSO SEMPRE AQUI EM BAIXO*/

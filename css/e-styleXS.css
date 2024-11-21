@@ -349,6 +349,98 @@
         transition: background-color 0.3s ease;
     }
 
+    /* PÁGINA SISTEMA */
+
+    /* Descrição poço */
+    #descricao-poco{
+        background-color: var(--cor-terciaria);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #descricao-poco .conteudo-texto .titulo{
+        font-family: "Anton", sans-serif;
+        font-size: 1.6rem;
+        letter-spacing: 0.1rem;
+        margin:  1rem 4rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bold;
+    }
+
+    #descricao-poco .conteudo-texto{
+        width: 78%;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-align: center;
+        color: var(--cor-texto-claro);
+        margin-bottom: 2rem;
+    }
+
+    /* Como funciona */
+    #como-funciona{
+        background-color: var(--cor-quarta);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #como-funciona .conteudo-texto .titulo{
+        font-family: "Anton", sans-serif;
+        font-size: 1.6rem;
+        letter-spacing: 0.1rem;
+        margin:  1rem 4rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bold;
+    }
+
+    #como-funciona .conteudo-texto{
+        width: 90%;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-align: center;
+        color: var(--cor-quinta);
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #como-funciona .conteudo-texto span{
+        font-size: 1.2rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    /* Representação gráfica do poço */
+    #representacao-poco{
+        height: auto;
+        background-color: var(--cor-sexta);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #representacao-poco .conteudo-texto .titulo{
+        font-family: "Anton", sans-serif;
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+        margin: 1rem 4rem;
+        color: var(--cor-texto-claro);
+        font-weight: bold;
+
+        font-family: "Anton", sans-serif;   
+    }
+
+    #representacao-poco .conteudo-texto img{
+        width: 100%
+    }
+
     /* PÁGINA CONTATO  url(../contato.html)*/
     #titulo-contato{
         width: 100vw;
@@ -510,7 +602,7 @@
         align-self: center;
     }
 
-        /* Botão de redirecionar para login */
+    /* Botão de redirecionar para login */
     #dica a{
         width: 10rem;
         border: 3px solid #747D5F;
