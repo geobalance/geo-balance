@@ -49,6 +49,20 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     border-radius: 50px;
 }
 
+/* Ocultar a barra lateral da ÁREA DO CLIENTE em telas menores */
+#menu-hamburguer-lateral{
+    display: none;
+}
+
+.menu-aca{
+    display: none;
+}
+
+/* Ocultar mensagem de indisponibilidade do chatbot  */
+#mensagem-chatbot{
+    display: none;
+}
+
 /* Extra Large */
 @media only screen and (min-width: 1200px) {
     .wrapper-main {

@@ -7,22 +7,33 @@ var mensagemForm = document.getElementById('mensagemForm');
 
 function enviarFormulario() {
     
-    if (emailEl.value == '') {
-
+    // Validação do campo de email
+    if (emailEl.value.trim() === '') {
         emailEl.focus();
-        emailEl.style.borderColor = '#cc3f3f';
-        emailEl.style.borderWidth = '3px'
-        return mensagemForm.innerText = 'O campo de *email* não pode ser vazio'
+        emailEl.style.border = '3px solid #cc3f3f';
+        mensagemForm.innerText = 'O campo *email* não pode ser vazio.';
+        return;
+    }
 
-    } else if (telefoneEl.value == ''){
+    // Remover caracteres não numéricos do telefone
+    const telefoneNumerico = telefoneEl.value.replace(/\D/g, ''); // Remove tudo que não é número
 
+    // Validação do campo de telefone vazio
+    if (telefoneNumerico === '') {
         telefoneEl.focus();
-        telefoneEl.style.borderColor = '#cc3f3f';
-        telefoneEl.style.borderWidth = '3px'
-        telefoneEl.style.border.color = '#cc3f3f'
-        return mensagemForm.innerHTML = 'O campo *telefone* não pode ser vazio'
+        telefoneEl.style.border = '3px solid #cc3f3f';
+        mensagemForm.innerText = 'O campo *telefone* não pode ser vazio.';
+        return;
+    }
 
-    } else {
+    // Validação do campo de telefone (apenas números)
+    if (telefoneNumerico.length < 10 || telefoneNumerico.length > 11) {
+        telefoneEl.focus();
+        telefoneEl.style.border = '3px solid #cc3f3f';
+        mensagemForm.innerText = 'Insira um número de telefone válido.';
+        return;
+    }
+
         mensagemForm.innerHTML = 'Tudo certo! Entraremos em contato com você em breve.';
         mensagemForm.style.color = '#FFF8E8'
         // Tirando as cores das bordas
@@ -36,11 +47,9 @@ function enviarFormulario() {
 
         botaoEnviar.disabled = true;
         botaoEnviar.style.backgroundColor = '#555'
-        botaoEnviar.style.cursor = 'not-allowed'
-        
-    }
-
-    botaoEnviar.addEventListener('click', enviarFormulario);
+        botaoEnviar.style.cursor = 'not-allowed'  
+    
+        botaoEnviar.addEventListener('click', enviarFormulario);
 }
 
 // Função de formatação de textos dinâmica
@@ -79,13 +88,14 @@ function formatarTexto(formato, campo){
     }
 }
 
-// Funcionalidade de login
+
+// FUNCIONALIDADE DE LOGIN
 var nomeUsuario = document.getElementById('nomeUsuario');
 var senhaUsuario = document.getElementById('senhaUsuario')
 var erroLogin = document.getElementById('erroLogin');
 
 // Verificando se o login bate com as credenciais de acesso fixa
-// Usuário = admin || Senha = 123
+// Senha = 123
 function iniciarSessao() {
 
     if (nomeUsuario == ''){
@@ -135,58 +145,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // FUNCIONALIDADES DA ÁREA DO CLIENTE
-    var campoSaudacoes = document.getElementById('campoSaudacoes');
+// FUNCIONALIDADES DA ÁREA DO CLIENTE
+var campoSaudacoes = document.getElementById('campoSaudacoes');
 
-    campoSaudacoes.innerHTML = "Olá, " + sessionStorage.getItem('usuario') + "!";
+campoSaudacoes.innerHTML = "Olá, " + sessionStorage.getItem('usuario') + "!";
 
-    // Pegando os elementos de link
-    var linkAssistente = document.getElementById('link-assistente');
-    var linkOrcamento = document.getElementById('link-orcamento');
-    var linkSimulacao = document.getElementById('link-simulacao');
+// Pegando os elementos de link
+var linkAssistente = document.getElementById('link-assistente');
+var linkOrcamento = document.getElementById('link-orcamento');
+var linkSimulacao = document.getElementById('link-simulacao');
 
-    // Pegando as seções
-    var secaoAssistente = document.getElementById('assistente');
-    var secaoOrcamento = document.getElementById('orcamento');
-    var secaoSimulacao = document.getElementById('simulacao');
+// Pegando as seções
+var secaoAssistente = document.getElementById('assistente');
+var secaoOrcamento = document.getElementById('orcamento');
+var secaoSimulacao = document.getElementById('simulacao');
 
-    function exibirSecao(secao) {
-        document.querySelectorAll('.secao').forEach(function(secao) {
-            secao.classList.add('secao-oculta');  // Adiciona a classe para ocultar
-        });
+function exibirSecao(secao) {
+    document.querySelectorAll('.secao').forEach(function(secao) {
+        secao.classList.add('secao-oculta');  // Adiciona a classe para ocultar
+    });
 
-        secao.classList.remove('secao-oculta');  // Remove a classe para exibir
-        console.log('Exibindo seção:', secao.id); 
-    }
+    secao.classList.remove('secao-oculta');  // Remove a classe para exibir
+    console.log('Exibindo seção:', secao.id); 
+}
 
-    if (linkAssistente) {
-        linkAssistente.addEventListener('click', function(event) {
-            event.preventDefault(); 
-            console.log('Botão Assistente clicado');  
-            exibirSecao(secaoAssistente);
-        });
-    }
+if (linkAssistente) {
+    linkAssistente.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        console.log('Botão Assistente clicado');  
+        exibirSecao(secaoAssistente);
+    });
+}
 
-    if (linkOrcamento) {
-        linkOrcamento.addEventListener('click', function(event) {
-            event.preventDefault();
-            console.log('Botão Orçamento clicado');
-            exibirSecao(secaoOrcamento);
-        });
-    }
+if (linkOrcamento) {
+    linkOrcamento.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log('Botão Orçamento clicado');
+        exibirSecao(secaoOrcamento);
+    });
+}
 
-    if (linkSimulacao) {
-        linkSimulacao.addEventListener('click', function(event) {
-            event.preventDefault();
-            console.log('Botão Simulação clicado');
-            exibirSecao(secaoSimulacao);
-        });
-    }
+if (linkSimulacao) {
+    linkSimulacao.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log('Botão Simulação clicado');
+        exibirSecao(secaoSimulacao);
+    });
+}
+// CHATBOT FICA AQUI!!!
 
-
-    // CHATBOT FICA AQUI!!!
-
-    // Inicializa com a primeira seção visível
+// Inicializa com a primeira seção visível
     exibirSecao(secaoAssistente);
     window.watsonAssistantChatOptions = {
         integrationID: "274bb353-a96b-46ed-a5f8-df85b5c7f1a5", // The ID of this integration.
@@ -199,15 +207,15 @@ document.addEventListener('DOMContentLoaded', function() {
             hideMinimizeButton: true,
         },
         layout: {
-          openChatByDefault: true,
-          hasContentMaxWidth: false, // Issso aqui deixa a tela cheia no chatbot, deixar como falso
+            openChatByDefault: true,
+            hasContentMaxWidth: false, // Issso aqui deixa a tela cheia no chatbot, deixar como falso
         }, onLoad: async (instance) => { 
             instance.openWindow();
             instance.updateLocale('pt-br');
             await instance.render();   
-      }
-      };
-      setTimeout(function(){
+        }
+        };
+        setTimeout(function(){
         const t=document.createElement('script');
         t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
         document.head.appendChild(t);
@@ -263,3 +271,20 @@ document.getElementById('hora').addEventListener('input', atualizarInformacoes);
 document.getElementById('cep').addEventListener('input', atualizarInformacoes);
 document.getElementById('numLocal').addEventListener('input', atualizarInformacoes);
 document.getElementById('referencia').addEventListener('input', atualizarInformacoes);
+
+
+// CONFIGURAÇÕES DA BARRA LATERAL
+document.querySelectorAll('#barra-lateral a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('menu-hamburguer-lateral').checked = false;
+    });
+});
+
+// Fecha ao clicar fora da barra lateral
+document.addEventListener('click', (e) => {
+    const sidebar = document.getElementById('barra-lateral');
+    const checkbox = document.getElementById('menu-hamburguer-lateral');
+    if (!sidebar.contains(e.target) && !checkbox.contains(e.target)) {
+        checkbox.checked = false;
+    }
+});

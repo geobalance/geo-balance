@@ -59,6 +59,12 @@
         </header>
 
         <div id="container-area-cliente">
+
+            <label for="menu-hamburguer-lateral" class="menu-aca">
+                <img src="images/icone-dropdown.svg" alt="Ícone de pessoa">
+            </label>
+            <input type="checkbox" id="menu-hamburguer-lateral" class="menu-hamburguer">
+
             <!-- Barra Lateral -->
             <aside id="barra-lateral">
                 <h2 id="campoSaudacoes"></h2>
@@ -77,7 +83,7 @@
                         </li>
                         <li>
                             <a href="#" id="link-simulacao">
-                                <img src="images/icone-calc.svg" alt="Ícone de Calculadora"> <p>Simular Economia</p>    
+                                <img src="images/icone-calc.svg" alt="Ícone de Calculadora"> <p>Simular Economia</p>
                             </a>
                         </li>
                     </ul>
@@ -87,12 +93,14 @@
             <!-- Conteúdo Principal -->
             <main>
 
-                <!-- LEMBRAR DE INVERTER ISSO AQUI!!! -->
+                <!-- SEÇÃO DE AGENDAR ORÇAMENTO -->
                 <section id="orcamento" class="secao">
-                    <!-- <div class="titulo conteudo-centro"><p>Fale com nosso Assistente</p></div> -->
                     <div id="espaco-chatbot"></div>
+                    <p id="mensagem-chatbot">O chatbot ainda não está disponível nesse tamanho de tela</p>
                 </section>
 
+
+                <!-- SEÇÃO DO ASSISTENTE -->
                 <section id="assistente" class="secao">
 
                     <div class="titulo conteudo-centro"><p>Agende um Serviço</p></div>
@@ -151,12 +159,12 @@
 
                 </section>
 
-            
+                <!-- SEÇÃO DA CALCULADORA -->
                 <section id="simulacao" class="secao">
 
                     <div class="titulo conteudo-centro"><p>Configure um Ambiente para calcular a economia</p></div>
 
-                    <div id="opcoes-calculadora">
+                    <section id="opcoes-calculadora">
                         <div class="caixa-opcao">
                             <label for="altura">Altura (metros) </label>
                             <input type="number" id="altura" placeholder="Altura">
@@ -168,12 +176,12 @@
                         </div>
                     
                         <div class="caixa-opcao">
-                            <label for="qtdPessoas">Quantidade de pessoas</label>
+                            <label for="qtdPessoas">Qtd. de pessoas</label>
                             <input type="number" id="qtdPessoas" placeholder="Pessoas">
                         </div>
                     
                         <div class="caixa-opcao">
-                            <label for="qtdEletronicos">Quantidade de eletrônicos</label>
+                            <label for="qtdEletronicos">Qtd. de eletrônicos</label>
                             <input type="number" id="qtdEletronicos" placeholder="Eletrônicos">
                         </div>
                     
@@ -181,7 +189,7 @@
                             <label for="exposicao">Tem alta exposição ao sol?</label>
                             <input type="checkbox" id="exposicao">
                         </div>
-                    </div>
+                    </section>
 
                     <div id="resultadoConsumo">
                         <p class="titulo conteudo-centro">Gastos Aproximados</p>

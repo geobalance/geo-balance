@@ -730,9 +730,9 @@
 
     /* Barra lateral */
     #barra-lateral {
-        width: 16vw;
-        height: 57vw;
-        max-height: 57vw;
+        width: 18vw;
+        height: 90vw;
+        max-height: 90vw;
         background-color: var(--cor-quinta);
         border-radius: 15px;
         color: var(--cor-texto-claro);
@@ -754,7 +754,7 @@
     /* Título de serviços */
     #barra-lateral h3 {
         font-family: "Baloo Chettan 2", sans-serif;
-        font-size: 1.6rem;
+        font-size: 100%;
         font-weight: bold;
         margin-bottom: 20px;
         color: var(--cor-texto-escuro);
@@ -775,17 +775,17 @@
 
     #barra-lateral nav ul li a {
         font-family: "Baloo Chettan 2", sans-serif;
-        font-size: 1rem;
         text-decoration: none;
+        flex-wrap: wrap;
         color: var(--cor-texto-claro);
         font-weight: bold;
         padding: 5px 5px;
         display: block;
         border-radius: 5px;
         background-color: var(--cor-terciaria);
-        text-align: left;
+        text-align: center;
         display: flex;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
     }
 
@@ -797,10 +797,10 @@
     /* Configuração da seção */
     .secao{
         margin: 2rem;
-        width: 75vw;
+        width: 73vw;
         max-width: 75vw;
-        height: 57vw;
-        max-height: 57vw;
+        height: 90vw;
+        max-height: 90vw;
         background-color: var(--cor-quarta);
         border-radius: 15px;
         display: flex;
@@ -808,6 +808,7 @@
         align-items: center;
         flex-direction: column;
         border: 5px solid var(--cor-texto-escuro);
+        overflow-y: scroll;
     }
 
     .secao .titulo p{
@@ -821,7 +822,239 @@
     .secao-oculta {
         display: none; /* Torna a seção invisível, mas ainda ocupa o mesmo espaço */
     }
+    
+    /* CONFIGURAÇÃO ASSISTENTE CHATBOT */
+    #espaco-chatbot{
+        position: relative; 
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
 
+    /* CONFIGURAÇÃO AGENDAR SERVIÇO */
+    #opcoes-agendamento{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .caixa-opcao{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #opcoes-agendamento .caixa-opcao label{
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bolder;
+        margin: 10px;
+    }
+
+    #opcoes-agendamento .caixa-opcao input, #opcoes-agendamento .caixa-opcao select{
+        border: 1px solid #333;
+        border-radius: 10px;
+        width: 160px;
+        text-align: center;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        color: var(--cor-texto-escuro);
+    }
+
+    #card-agendamento{
+        text-align: center;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-weight: bold;
+        font-size: 100%;
+        width: 60%;
+        color: var(--cor-texto-claro);
+        padding: 10px;
+        background-color: var(--cor-quinta);
+        border-radius: 15px;
+        margin: 15px 0;
+        text-align: start;
+        border: 3px solid var(--cor-texto-secundario);
+    }
+
+    #card-agendamento #tituloCard{
+        color: var(--cor-texto-claro);
+        font-size: 1.2rem;
+        background-color: var(--cor-quinta);
+    }
+
+    #card-agendamento #container-descricao{
+        height: 100px;
+        display: flex;
+        justify-content: center
+    }
+
+    #card-agendamento .caixaInformacoesAgendamento{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #card-agendamento .caixaInformacoesAgendamento span{
+        color: var(--cor-texto-escuro);
+        margin-right: 10px;
+    }
+
+    #campo-confirmacao-agenda #btn-agendar {
+        width: 14rem;
+        height: 2.6rem;
+        font-size: 1.8rem;
+        background-color: var(--cor-terciaria);
+        border-radius: 60px;
+        text-decoration: none;
+        border: 3px solid var(--cor-quinta);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--cor-quarta);
+        font-family: "Anton", sans-serif;
+    }
+
+    #campo-confirmacao-agenda #btn-agendar:hover {
+        border: 3px solid var(--cor-terciaria);
+        background-color: var(--cor-quinta);
+        transition: background-color 0.2s ease
+    }
+
+
+    /* CALCULADORA - SIMULAÇÃO   */
+    #simulacao .titulo p{
+        font-size: 1.8rem;
+    }
+
+    #opcoes-calculadora{
+        width: 80%;        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #opcoes-calculadora div{
+        margin: 5px;
+    }
+
+    #opcoes-calculadora .caixa-opcao input, #opcoes-agendamento .caixa-opcao select{
+        border: 1px solid #333;
+        border-radius: 10px;
+        width: 160px;   
+        text-align: center;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1rem;
+        color: var(--cor-texto-escuro);
+    }
+
+    #opcoes-calculadora .caixa-opcao label{
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bolder;
+    }
+
+    .caixa-opcao-checkbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caixa-opcao-checkbox label{
+        margin: 5px;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        color: var(--cor-texto-escuro);
+        font-weight: bolder;
+    }
+
+    .caixa-opcao-checkbox input{
+        border: 1px solid #333;
+        border-radius: 50px;
+        width: 25px;   
+        height: 25px;
+        text-align: center;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-size: 1.2rem;
+        color: var(--cor-texto-escuro);
+        appearance: none; 
+        background-color: #fff; 
+        cursor: pointer; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: '❌';
+    }
+    
+    .caixa-opcao-checkbox input::before {
+        content: '✖';
+    }
+    
+    .caixa-opcao-checkbox input:checked::before {
+        content: '✔';
+    }
+
+    #btn-config-ambiente{
+        width: 14rem;
+        height: 2.6rem;
+        font-size: 1.6rem;
+        background-color: var(--cor-terciaria);
+        border-radius: 60px;
+        text-decoration: none;
+        border: 3px solid var(--cor-quinta);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--cor-quarta);
+        font-family: "Anton", sans-serif;
+    }
+
+    #btn-config-ambiente:hover {
+        background-color: var(--cor-quinta);
+        border: 3px solid var(--cor-terciaria);
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+
+    #resultadoConsumo{
+        width: 60%;
+        height: 38%;
+        text-align: center;
+        font-family: "Baloo Chettan 2", sans-serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: var(--cor-texto-claro);
+        padding: 10px;
+        background-color: var(--cor-quinta);
+        border-radius: 15px;
+        margin-bottom: 20px;
+        text-align: start;
+        border: 3px solid var(--cor-texto-secundario);
+    }
+
+    #resultadoConsumo .titulo{
+        color: var(--cor-texto-claro);
+        font-size: 1.4rem;
+        background-color: var(--cor-quinta);
+    }
+
+    #resultadoConsumo .item span{
+        color: var(--cor-texto-escuro);
+        margin-right: 5px;
+    }
+
+    #totalEconomia{
+        margin-top: 5px;   
+        font-size: 1.4rem;
+    }
 
     /*  PÁGINA DE INTEGRANTES - DEIXAR ISSO SEMPRE AQUI EM BAIXO*/
     #integrantes{
